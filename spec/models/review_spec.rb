@@ -1,4 +1,5 @@
 require 'rails_helper'
+require 'pry'
 
 describe Review do
   let(:nyc) { City.create(name: 'NYC') }
@@ -40,6 +41,8 @@ describe Review do
   it 'has a rating' do
     expect(review.rating).to eq(5)
   end
+
+
 
   it 'belongs to a guest' do
     expect(review.guest).to eq(logan)
